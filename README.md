@@ -1,3 +1,3 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
+CS5500 MSD
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+MEETUP Website Development.
