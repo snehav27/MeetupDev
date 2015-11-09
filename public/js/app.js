@@ -15,11 +15,9 @@
   ]
 )
 .config(
-  [          '$stateProvider', '$urlRouterProvider',  '$httpProvider',
-    function ($stateProvider,   $urlRouterProvider, $httpProvider) {
+  [          '$stateProvider', '$urlRouterProvider', 
+    function ($stateProvider,   $urlRouterProvider) {
 		
-	$httpProvider.defaults.useXDomain = true;
-	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
       $urlRouterProvider
           .when('/', '/home')
