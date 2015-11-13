@@ -8,7 +8,7 @@ app.controller('apiTestCtrl', function($scope, GlobalService) {
   $scope.getDetails = GlobalService.eventList(function(response) {
     console.log(response["results"]);
     var eventsInfo = response["results"];
-    console.log(eventsInfo[0].name);
+    console.log(eventsInfo);
     $scope.eventsInfo = eventsInfo;
   });
 });
