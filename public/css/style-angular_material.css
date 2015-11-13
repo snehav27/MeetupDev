@@ -1,7 +1,13 @@
 md-radio-button {
   display: inline;
 }
- md-tab-item span {
-        padding: 15px;
-        margin: -15px;
+md-tab-item span {
+    padding: 15px;
+    margin: -15px;
+}
+.partialListDivider .face {
+  border-radius: 30px;
+  border: 1px solid black;
+  width: 20%;
+  margin: 20%;
 }
