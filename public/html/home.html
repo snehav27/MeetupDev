@@ -14,7 +14,7 @@
         <label>Category</label>
           <md-select ng-model="ctrl.userState" ng-click="getCategories()">
               <md-option ng-repeat="category in categoryList">
-                  {{category.name}}
+                  <a ng-click="getEventByTopic(category.urlkey)">{{category.name}}</a>
               </md-option>
           </md-select>
       </md-input-container>

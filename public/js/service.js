@@ -20,14 +20,20 @@ app.factory("GlobalService", function GlobalService($http) {
   };
 
   var getCategories = function (callback) {
-      $http.jsonp('https://api.meetup.com/2/categories?offset=0&format=json&api_key=' + meetupAPIKey + '&page=500&order=shortname&desc=false&sig_id=195469623&sig=f304a2543fce1c87e17b3a8d2606f87bf420f5cb&callback=JSON_CALLBACK')
+      $http.jsonp('https://api.meetup.com/topics?offset=0&format=json&photo-host=public&page=20&order=members&sig_id=195469623&key=' + meetupAPIKey + '&callback=JSON_CALLBACK')
           .success(callback)
+  };
+
+  var getEventByTopic = function (zipcode, topic, callback) {
+      $http.jsonp('https://api.meetup.com/2/open_events?zip=' + zipcode + '&and_text=False&offset=0&format=json&limited_events=False&topic=' + topic + '&photo-host=public&page=20&radius=25.0&desc=False&status=upcoming&key=' + meetupAPIKey + '&callback=JSON_CALLBACK')
+      .success(callback)
   };
 
   return {
       eventList: eventList,
       getEventByZipCode: getEventByZipCode,
-      getCategories: getCategories
+      getCategories: getCategories,
+      getEventByTopic: getEventByTopic
   };
 });
 

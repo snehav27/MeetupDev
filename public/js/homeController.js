@@ -16,6 +16,7 @@ app.controller('homeCtrl', function(GlobalService, $scope, $http) {
        GlobalService.getEventByZipCode($scope.zipcode, function (response) {
            $scope.eventList = response.results;
            console.log($scope.zipcode);
+           console.log(response.results);
        })
 
    };
@@ -24,17 +25,21 @@ app.controller('homeCtrl', function(GlobalService, $scope, $http) {
       function () {
           GlobalService.getCategories(function (response) {
               $scope.categoryList = response.results;
+              
           });
          
       };
 
+  $scope.getEventByTopic = function (topic) {
+      GlobalService.getEventByTopic($scope.zipcode, topic, function (response) {
+          $scope.eventList = response.results;
+          console.log(response);
+      })
+  }
   }
 );
 
 app.controller('partialCtrl', function (GlobalService, $scope, $http) {
-    GlobalService.getEventByZipCode($scope.zipcode, function (response) {
-        $scope.eventList = response.results;
-        console.log($scope.zipcode);
-    })
+  
 }
 );
