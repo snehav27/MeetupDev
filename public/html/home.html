@@ -1,48 +1,37 @@
 <div  ng-controller="homeCtrl">
   <div layout="row" layout-sm="column" layout-align="space-around">
     <div>
-      <md-input-container>
+      <md-input-container >
         <label>Zip Code</label>
-        <input>
+          <input ng-model="zipcode">
       </md-input-container>
     </div>
     <div>
-      <md-button class="md-raised" ng-click="getEventDetails()">Search</md-button>
+        <md-button class="md-raised" ng-controller="partialCtrl" ng-click="getEventDetails()">Search</md-button>
     </div>
     <div>
       <md-input-container>
         <label>Category</label>
-        <md-select ng-model="ctrl.userState">
-          <md-option>
-            Sports
-          </md-option>
-          <md-option>
-            Education
-          </md-option>
-          <md-option>
-            Technology
-          </md-option>
-        </md-select>
+          <md-select ng-model="ctrl.userState" ng-click="getCategories()">
+              <md-option ng-repeat="category in categoryList">
+                  <a ng-click="getEventByTopic(category.urlkey)">{{category.name}}</a>
+              </md-option>
+          </md-select>
       </md-input-container>
     </div>
   </div>
   <div layout="row" layout-sm="column" layout-align="space-around">
-    <md-progress-circular md-mode="determinate" </md-progress-circular>
+    <md-progress-circular md-mode="determinate" ></md-progress-circular>
   </div>
   <div layout="row" layout-sm="column" layout-align="space-around">
     <md-radio-group ng-model="data.group1">
-      <md-radio-button value="Map" class="md-primary">Map</md-radio-button>
-      <md-radio-button value="List"> List </md-radio-button>
+        <a ui-sref=".map" checked="checked"><md-radio-button value="Map" class="md-primary">Map</md-radio-button></a>
+      <a ui-sref=".list"><md-radio-button value="List" > List </md-radio-button></a>
     </md-radio-group>
   </div>
-  <div>
-    <md-card>
-      {{ dataFromController}}
-      <br><br><br><br><br><br>
-      <p>Click On Searh to get API Info</p>
-      <div>{{eventsList[0].name}} </div>
-      <br><br><br><br><br><br><br>
-    </md-card>
-  </div>
-  <div ui-view></div>
+    <div>
+       
+       
+        <div ui-view></div>
+    </div>
 </div>
