@@ -1,1 +1,50 @@
-<h1>Login Page <h1>
+<div ng-controller="homeCtrl" class="contentdemoBasicUsage">
+  
+  <form name="userLoginForm">
+    <div layout="column" layout-sm="column" layout-align="start center">
+      
+      <div layout-margin>
+        <md-content>
+        Enter your login credentials below:
+        </md-content>
+      </div>
+      
+      <div>
+        <md-input-container>
+          <label>Email</label>
+          <input type="email">
+        </md-input-container>
+      </div>
+      
+      <div>
+        <md-input-container>
+          <label>Password</label>
+          <input type="password">
+        </md-input-container>
+      </div>
+    
+      <div layout-margin>
+        <md-button class="md-raised">Login</md-button>
+      </div>
+    </div>
+  </form>
+  
+  <div layout="column" layout-sm="column" layout-align="start center" layout-margin>
+    
+    <div>
+      <md-content flex layout-margin>
+      Not registered? Click below:
+      </md-content>
+    </div>
+    
+    <div>
+      <md-button class="md-raised" ui-sref="register">Register</md-button>
+    </div>
+  </div>
+  
+  <div layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular md-mode="determinate">
+    </md-progress-circular>
+  </div>
+ 
+</div>

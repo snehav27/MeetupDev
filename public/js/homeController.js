@@ -36,6 +36,20 @@ app.controller('homeCtrl', function(GlobalService, $scope, $http) {
           console.log(response);
       })
   }
+
+  $scope.user = {
+        email: '',
+        password: '',
+        confirmPassword: '',
+        firstName: '',
+        lastName: '' ,
+        address: '' ,
+        address2: '',
+        city: 'Boston' ,
+        state: 'MA' ,
+        zipCode : '02115'
+      };
+
   }
 );
 

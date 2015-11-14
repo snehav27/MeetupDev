@@ -43,6 +43,10 @@
             url: '/login',
             templateUrl: 'html/login.html',
             onEnter: function() { console.log("enter login.html"); } })
+    .state('register', {
+            url: '/register',
+            templateUrl: 'html/register.html',
+            onEnter: function() { console.log("enter register.html"); } })
 		.state('apitest', {
             url: '/apitest',
             templateUrl: 'html/apitest.html',
