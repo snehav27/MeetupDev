@@ -1,0 +1,73 @@
+<div ng-controller="homeCtrl" class="contentdemoBasicUsage" ng-app="MeetUpApp">
+  
+	<form name="userRegistrationForm">
+  		<div layout="column" layout-sm="column" layout-padding>
+    		
+    		<div layout layout-align="center center" layout-margin>
+      			<md-content>
+        			Enter your registration details below:
+        		</md-content>
+    		</div>
+			
+			<div layout>
+				<md-input-container flex>
+					<label>Email</label>
+				  	<input ng-model="user.email" type="email">
+				</md-input-container>
+				<md-input-container flex>
+				  	<label>Password</label>
+				  	<input ng-model="user.password" type="password">
+				</md-input-container>
+				<md-input-container flex>
+				  	<label>Confirm Password</label>
+				  	<input ng-model="user.confirmPassword" type="password">
+				</md-input-container>
+    		</div>
+    		
+    		<div layout>
+				<md-input-container flex>
+				  	<label>First Name</label>
+				  	<input ng-model="user.firstName">
+				</md-input-container>
+				<md-input-container flex>
+				  	<label>Last Name</label>
+				  	<input ng-model="user.lastName">
+				</md-input-container>
+    		</div>
+    		
+    		<div layout>
+			 	<md-input-container flex>
+					<label>Address</label>
+				   	<input ng-model="user.address">
+				</md-input-container>
+      		</div>
+    		
+    		<div layout>
+				<md-input-container flex>
+				 	<label>Address 2</label>
+				   	<input ng-model="user.address2">
+				</md-input-container>
+    		</div>
+    		
+    		<div layout>
+				<md-input-container flex>
+				  	<label>City</label>
+				  	<input ng-model="user.city">
+				</md-input-container>
+				<md-input-container flex>
+				  	<label>State</label>
+				  	<input ng-model="user.state">
+				</md-input-container>
+				<md-input-container flex>
+				  	<label>ZIP Code</label>
+				  	<input ng-model="user.zipCode">
+				</md-input-container>
+			</div>
+    	</div>
+    	
+    	<div layout="row" layout-align="center center" layout-margin>
+        	<md-button class="md-raised">Register</md-button>
+      	</div>
+	
+	</form>
+</div>
