@@ -1,3 +1,29 @@
-﻿<ul>
-    <li ng-repeat="event in eventList">{{event.group.name}}</li>
-</ul>
+﻿<br /><br />
+<div layout="row" ng-cloak="" ng-controller="partialCtrl">
+    <div flex="10">
+    </div>
+    <div flex>
+        <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+                <span>Events</span>
+            </h2>
+        </md-toolbar>
+        <md-content>
+            <md-list>
+                <div ng-repeat="event in eventList">
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text">
+                            <a href="{{event.event_url}}" target="_blank">{{event.group.name}}</a>
+                            <p>Date: {{event.time | date: 'MM-dd-yyyy'}}</p>
+                            <p>Time: {{event.time | date:  'HH:mm:ss Z'}}</p>
+                        </div>
+                        <md-button>RSVP</md-button>
+                    </md-list-item>
+                    <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                </div>
+            </md-list>
+        </md-content>
+    </div>
+    <div flex="10">
+    </div>
+</div>

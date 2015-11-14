@@ -40,6 +40,5 @@ app.controller('homeCtrl', function(GlobalService, $scope, $http) {
 );
 
 app.controller('partialCtrl', function (GlobalService, $scope, $http) {
-  
-}
-);
+    
+});
